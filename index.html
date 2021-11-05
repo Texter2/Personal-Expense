@@ -1,0 +1,40 @@
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Peronal expense</title>
+            <style>
+                    body {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                        }
+            </style>
+
+            </head>
+            <body>
+                <h1 id ="banner"></h1>
+                <input id ="inputAmount" type="text"> </input>
+                <button id ='btnAddToTotal'>+</button>
+                    <script>
+                        let totalExpense = 0;
+                        const heading = document.querySelector("#banner")
+                        heading.textContent = totalExpense;
+                    
+                        function addExpenseToToTal (){
+                            const inputElement = document.querySelector("#inputAmount");
+                            const textAmount = inputElement.value;
+                            const spent = parseInt(textAmount,10);
+                            totalExpense += spent;
+                            heading.textContent = totalExpense;
+                        }
+                        const element = document.querySelector("#btnAddToTotal");
+                        element.addEventListener("click",addExpenseToToTal,false);
+                
+                    </script>
+            </body>
+            </html>
